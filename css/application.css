@@ -1,0 +1,71 @@
+p {
+    text-indent: 30px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header */
+th {
+  background: rgba(0, 100, 180, 0.65);
+  color: white;
+  padding: 16px;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Table cells */
+td {
+  padding: 14px 16px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Alternating eye guides */
+tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+tr:nth-child(odd) td {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Hover highlight */
+tbody tr:hover td {
+  background: rgba(100, 190, 255, 0.28);
+  transition: background 0.2s ease;
+}
+
+/* Number column */
+td:first-child {
+  text-align: center;
+  font-weight: bold;
+  color: #b9e6ff;
+  width: 60px;
+}
+
+/* Last row */
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}

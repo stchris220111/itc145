@@ -1,0 +1,44 @@
+/* Contact Form */
+.main-content form {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: rgba(11, 18, 32, 0.85);
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+.main-content form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.main-content form input,
+.main-content form select,
+.main-content form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #64748b;
+    border-radius: 5px;
+    background-color: #e2e8f0;
+    color: #0b1220;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+.main-content form button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-content form button:hover {
+    background-color: #0891b2;
+}

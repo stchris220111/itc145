@@ -1,0 +1,207 @@
+/* Design for every page */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: #0b1220;
+  background-image: url("/images/bt_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Overall page structure */
+
+.page-container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Checkbox menu trick*/
+#menu-toggle {
+  display: none;
+}
+
+/* RESPONSIVE CONTENT IMAGES */
+
+.history-image,
+.application-image,
+.future-image {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+    margin: 20px auto;
+
+    object-fit: contain;
+}
+
+/* Header/Branding/Navigation */
+
+.site-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  text-align: center;
+}
+
+.branding {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  gap: 20px;
+}
+
+a:visited {
+  color: #a6a0ff;
+}
+
+a:hover {
+  color: #b0f7ff;
+  text-shadow:
+    0 0 5px rgba(103, 223, 245, 0.7),
+    0 0 12px rgba(45, 190, 255, 0.45);
+}
+
+.site-title span:hover {
+  color: #b0f7ff;
+  text-shadow:
+    0 0 5px rgba(103, 223, 245, 0.9),
+    0 0 12px rgba(45, 190, 255, 0.7),
+    0 0 24px rgba(45, 190, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.horizontal {
+  background-color: #0b1220;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  flex: 0 1 0 auto;
+
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 30px auto;
+  padding: 25px;
+
+  border-radius: 10px;
+
+  line-height: 1.7;
+}
+
+/* FOOTER */
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 600px) {
+  .branding {
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  /* Show hamburger menu */
+
+  .menu-icon {
+    display: block;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  /* Hide links initially */
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Show links when checkbox is checked */
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .horizontal {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .horizontal a {
+    font-size: 1.1rem;
+  }
+
+  .main-content {
+    width: 95%;
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+}
